@@ -1,4 +1,5 @@
-import { WebGPURenderer } from './renderer';
+// import { WebGPURenderer } from './renderer';
+import { FirstTriangle } from './engine/firstTriangle';
 
 (async () => {
   const canvas = document.getElementById('webgpu-canvas') as HTMLCanvasElement;
@@ -15,10 +16,12 @@ import { WebGPURenderer } from './renderer';
 
   console.log(canvas.width, canvas.height);
 
-  const renderer = new WebGPURenderer(canvas);
+  // const renderer = new WebGPURenderer(canvas);
+  const renderer = new FirstTriangle(canvas);
 
   try {
-    await renderer.init('./src/shaders.wgsl'); // 将着色器路径传入
+    // await renderer.init('./src/shaders.wgsl'); // 将着色器路径传入
+    await renderer.initPipeline(); // 将着色器路径传入
     console.log('WebGPU initialized successfully.');
 
     // 开始渲染

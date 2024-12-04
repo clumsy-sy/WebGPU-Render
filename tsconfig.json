@@ -8,9 +8,14 @@
     "skipLibCheck": true,
     "lib": ["DOM", "ES2020"],
     "outDir": "./dist", // 输出目录
-    "sourceMap": true // 生成 source map
+    "sourceMap": true, // 生成 source map
+    "typeRoots": [
+      "./node_modules/@webgpu/types",
+      "./node_modules/wgpu-matrix/dist/3.x",
+      "./src/shaders"                            // 声明 wgsl 以 string 类型 import
+    ]
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "resources/**/*"],
 }
 
 // {
