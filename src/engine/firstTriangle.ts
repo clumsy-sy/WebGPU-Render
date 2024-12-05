@@ -26,8 +26,6 @@ export class FirstTriangle extends BaseRenderer {
       alphaMode: 'opaque',
     });
 
-    if (!this.device) throw new Error('Device is not initialized.');
-
     const shaderModule = this.device.createShaderModule({
       code: firstTriangle,
     });

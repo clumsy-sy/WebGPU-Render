@@ -13,3 +13,8 @@ pnpm install
 ```
 pnpm dev run
 ```
+
+
+## 参考
+
+1. [webgpu sample](https://github.com/webgpu/webgpu-samples)

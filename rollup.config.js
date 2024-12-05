@@ -1,6 +1,7 @@
 import typescript from '@rollup/plugin-typescript';
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
+import resolve from '@rollup/plugin-node-resolve';
 
 function wgsl2String() {
   return {
@@ -21,10 +22,12 @@ export default {
   output: {
     file: 'dist/bundle.js', // 输出文件
     format: 'iife', // 打包为立即执行函数，适合浏览器环境
+    // format: 'esm', // 打包为 ES 模块，适合 Node.js 环境
     sourcemap: true, // 生成 source map
   },
   plugins: [
     wgsl2String(), // 处理 wgsl 文件
+    resolve(), // 解析第三方模块
     typescript(), // TypeScript 转换插件
     serve({
       open: true, // 启动服务器时自动打开浏览器

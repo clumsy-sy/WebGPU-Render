@@ -1,5 +1,6 @@
 // import { WebGPURenderer } from './renderer';
 import { FirstTriangle } from './engine/firstTriangle';
+import { Cube3D } from './engine/cube3D';
 
 (async () => {
   const canvas = document.getElementById('webgpu-canvas') as HTMLCanvasElement;
@@ -17,7 +18,8 @@ import { FirstTriangle } from './engine/firstTriangle';
   console.log(canvas.width, canvas.height);
 
   // const renderer = new WebGPURenderer(canvas);
-  const renderer = new FirstTriangle(canvas);
+  // const renderer = new FirstTriangle(canvas);
+  const renderer = new Cube3D(canvas);
 
   try {
     // await renderer.init('./src/shaders.wgsl'); // 将着色器路径传入
