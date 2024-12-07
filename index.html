@@ -4,9 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WebGPU Renderer</title>
+  <style>
+    #container {
+      position: relative;
+    }
+
+    #example-select {
+      position: absolute;
+      top: 10px; /* 调整选择框距离 Canvas 顶部的距离 */
+      left: 50%; /* 将选择框居中对齐 */
+      transform: translateX(-50%); /* 使选择框水平居中 */
+    }
+
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
 </head>
 <body>
-  <canvas id="webgpu-canvas"></canvas>
+  <div id="container" class=".centered">
+    <select id="example-select"></select>
+    <canvas id="webgpu-canvas"></canvas>
+  </div>
   <script src="./dist/bundle.js" type="module"></script>
 </body>
 </html>
