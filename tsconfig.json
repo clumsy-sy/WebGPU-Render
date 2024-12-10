@@ -12,6 +12,7 @@
     "moduleResolution": "Node",
     "typeRoots": [
       "./node_modules/@webgpu/types",
+      "./node_modules/@types",
       "./src/shaders"                            // 声明 wgsl 以 string 类型 import
     ]
   },

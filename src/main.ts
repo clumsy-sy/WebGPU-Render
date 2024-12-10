@@ -1,10 +1,12 @@
 // import { WebGPURenderer } from './renderer';
 import { FirstTriangle } from './engine/firstTriangle';
 import { Cube3D } from './engine/cube3D';
+import { CubeMove } from './engine/cubeMove';
 
 enum WebGPUExample  {
   "firstTriangle",
   "cube3D",
+  "CubeMove"
 }
 
 function generateOptions(): string {
@@ -17,6 +19,8 @@ function generateOptions(): string {
   });
   return options;
 }
+
+
 
 (async () => {
   const select = document.getElementById('example-select') as HTMLSelectElement;
@@ -44,6 +48,8 @@ function generateOptions(): string {
       renderer = new FirstTriangle(canvas);
     } else if(selectedOption === 'cube3D') {
       renderer = new Cube3D(canvas);
+    } else if(selectedOption === 'CubeMove') {
+      renderer = new CubeMove(canvas);
     } else {
       throw new Error('Invalid option selected.');
     }
