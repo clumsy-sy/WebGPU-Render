@@ -242,4 +242,8 @@ export class CubeMove extends BaseRenderer {
     mat4.multiply(this.projectionMatrix, viewMatrix, this.modelViewProjectionMatrix);
     return this.modelViewProjectionMatrix;
   }
+
+  public destory(): void {
+    this.gui.destroy();
+  }
 }

@@ -217,4 +217,8 @@ export class Cube3D extends BaseRenderer {
     mat4.multiply(this.projectionMatrix, viewMatrix, this.modelViewProjectionMatrix);
     return this.modelViewProjectionMatrix;
   }
+
+  public destory(): void {
+  }
+
 }

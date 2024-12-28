@@ -76,5 +76,9 @@ export class FirstTriangle extends BaseRenderer {
   afterRender() {
 
   }
+
+  public destory(): void {
+    
+  }
   
 }

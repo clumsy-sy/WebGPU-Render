@@ -34,4 +34,6 @@ export abstract class BaseRenderer {
   public abstract render(): void;
 
   public abstract afterRender(): void;
+
+  public abstract destory(): void;
 }
