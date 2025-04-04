@@ -169,18 +169,21 @@ export class DeferredRenderer {
   private createGBufferTexture() {
     // 颜色信息
     const gBufferTexture2DFloat16 = this.device!.createTexture({
+      label: 'gBufferTexture2DFloat16',
       size: [this.canvas.width, this.canvas.height],
       usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING,
       format: 'rgba16float',
     });
     // 反照率信息
     const gBufferTextureAlbedo = this.device!.createTexture({
+      label: 'gBufferTextureAlbedo',
       size: [this.canvas.width, this.canvas.height],
       usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING,
       format: 'bgra8unorm',
     });
     // 深度信息
     const depthTexture = this.device!.createTexture({
+      label: 'depthTexture',
       size: [this.canvas.width, this.canvas.height],
       format: 'depth24plus',
       usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING,
